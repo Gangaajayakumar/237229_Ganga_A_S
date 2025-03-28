@@ -1,0 +1,1 @@
+from .Strops import getAllSpans, reverseWords, removePunctuation, countWords, charecterMap, makeTitle, normalizeSpaces, transform, get_permutations
