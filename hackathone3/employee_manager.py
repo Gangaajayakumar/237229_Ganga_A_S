@@ -20,7 +20,7 @@ class EmployeeManager(object):
         for emp in self.employees:
             if emp.id == id:
                 return emp
-            return None
+        return None
         
         
     #delete an employee
@@ -29,7 +29,7 @@ class EmployeeManager(object):
             if emp.id == id:
                 self.employees.remove(emp)
                 return True
-            return False
+        return False
         
     #load employee details
     def load_employee(self,employee_dict):
