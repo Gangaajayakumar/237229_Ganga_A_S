@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h1>Enter Your Details</h1>
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+
+        <label for="company">Company:</label><br>
+        <input type="text" id="company" name="company"><br><br>
+
+        <label for="gross_salary">Gross Salary:</label><br>
+        <input type="number" id="gross_salary" name="gross_salary"><br><br>
+
+        <label for="tax">Tax:</label><br>
+        <input type="number" id="tax" name="tax" min="0" max="100" step="0.01"><br><br>
+
+        <label for="bonus">Bonus:</label><br>
+        <input type="number" id="bonus" name="bonus" min="0" max="100" step="0.01"><br><br>
+
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
